@@ -1,5 +1,10 @@
 import React, { useEffect, useState } from "react";
 
+const User = {
+    email: 'qkdajr@example.com',
+    pw: "bmmb1212!!!"
+}
+
 
 export default function Login() {
     const [email,setEmail] = useState('');
@@ -28,6 +33,14 @@ export default function Login() {
             setPwValid(true);
         }else {
         setPwValid(false);
+        }
+    }
+
+    const onclickConfirmButton = () => {
+        if(email === User.email && User.pw) {
+            alert('로그인에 성공했습니다!');
+        } else {
+            alert('등록되지 않은 회원입니다.')
         }
     }
 
@@ -85,7 +98,7 @@ export default function Login() {
                     </div>
                 </div>
                 <div>
-                    <button disabled={notAllow} className="bottomButton">
+                    <button onClick={onclickConfirmButton} disabled={notAllow} className="bottomButton">
                         확인
                     </button>
                 </div>
