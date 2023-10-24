@@ -1,0 +1,16 @@
+
+.List {
+    border: 1px solid gray;
+    padding: 20px;
+    margin-top: 20px;
+    
+  }
+  
+  .List h2 {
+    text-align: center;
+  }
+  li {
+    margin-bottom: 10px;
+    border-bottom: 1px solid black;
+   
+  }
