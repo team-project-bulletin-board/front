@@ -5,7 +5,7 @@ import { Backend_URL } from "../utils";
 export const Join = () => {
 
      const [username,setUsername] = useState("")     
-    //  const [email,setEmail] = useState("")     
+     const [email,setEmail] = useState("")     
      const [password,setPassword] = useState("")     
     return (
         <div>
@@ -17,7 +17,7 @@ export const Join = () => {
             methode: "Post",
             data: {
                 username,
-                // email,
+                 email,
                 password,
             }
         })
@@ -36,7 +36,7 @@ export const Join = () => {
             onChange={(e)=>
             setUsername(e.target.value)}
             />
-            {/* <div className="info" placeholder="Email">아이디</div>
+             <div className="info" placeholder="Email">아이디</div>
             <input
             type="email"
             className="inputForm"
@@ -44,7 +44,7 @@ export const Join = () => {
             value={email}
             onChange={(e)=>
             setEmail(e.target.value)}
-            /> */}
+            /> 
             <div className="info">비밀번호</div>
             <input 
             type="email"
