@@ -26,7 +26,7 @@ function List(){
  }
 
   return (
-    <div className='List'>
+    <div className='pageList'>
 
       {/* <h2>게시물 목록</h2>
       <div>

@@ -1,8 +1,10 @@
-.WritingEditor_page {
-    position: absolute;
+.pageItem{
+
+   position: absolute;
     top: 0;
     bottom: 0;
-    max-width: 500px;
+    min-width: 300px;
+    max-width: 600px;
     padding: 0 20px;
 
     left: 50%;
@@ -56,4 +58,7 @@ h2 {
     padding: 10px;
     cursor: pointer;
     border-radius: 5px;
+    background-color: rgb(233, 246, 168);
+    
+
    } 

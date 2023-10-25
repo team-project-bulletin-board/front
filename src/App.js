@@ -13,6 +13,7 @@ import './App.css';
 import WritingEditor from "./Pages/WritingEditor";
 import PostComment from "./components/PostComment";
 import PostLogin from "./components/PostLogin";
+import PostJoin from "./components/PostJoin";
 
 
 
@@ -49,6 +50,7 @@ function App() {
         <Route path="/write" element={<PostWrite/>}/>
         <Route path="/login" element={<PostLogin />}/>
         <Route path="/commentList" element={<PostComment />}/>
+        <Route path="/join" element={<PostJoin />}/>
       </Routes>
       </BrowserRouter>
       

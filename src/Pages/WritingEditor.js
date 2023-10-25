@@ -41,7 +41,7 @@ const WritingEditor = ({onCreate})=>{
 
     
     return (
-      <div className="DiaryEditor">
+      <div className="pageItem">
         <h2>글쓰기</h2>
         <div>
           <p>제목</p>

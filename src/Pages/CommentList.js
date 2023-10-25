@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import WritingEditor from "./WritingEditor";
+
 
 
 
@@ -41,7 +41,7 @@ const CommentList = ({
            }
         };
     return  (
-       <div className="CommentList">
+       <div className="pageMenu">
          <input className="inputItem"/> 
             <div className="content">
                 {isEdit ? (

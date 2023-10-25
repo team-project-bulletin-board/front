@@ -1,9 +1,23 @@
-.Comment {
- 
-    /* margin-bottom: 10px;
-    padding: 20px; */
-  }
-  
+.pageMenu {
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  min-width: 300px;
+  max-width: 600px;
+  padding: 0 20px;
+
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  background-color: #f6f5f5;
+
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+} 
+
 
   .content {
     font-weight: bold;

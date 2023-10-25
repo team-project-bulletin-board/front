@@ -1,6 +1,7 @@
-import '../Pages/Login'
+import '../css/PostLogin.css';
 import Login from '../Pages/Login';
-import '../css/PostView.css'
+
+
 
 function PostLogin(){
     return(
