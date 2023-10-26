@@ -42,7 +42,6 @@ const CommentList = ({
         };
     return  (
        <div className="pageMenu">
-         <input className="inputItem"/> 
             <div className="content">
                 {isEdit ? (
              <>
