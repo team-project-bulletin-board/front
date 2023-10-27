@@ -1,11 +1,12 @@
- import { useRef, useState, useEffect, useMemo } from "react";
+ import { useRef, useState, useEffect } from "react";
  import {BrowserRouter,Routes,Route} from 'react-router-dom';
- import PostMain from "./components/PostMain";
- import PostWrite from "./components/PostWrite";
+ import RouteTest from './components/RouteTest';
+ import Login from "./Pages/Login";
+ import List from './Pages/List';
+ import Comment from "./Pages/Comment";
+ import Writing from "./Pages/Writing";
+ import Join from './Pages/Join';
  
- import PostComment from "./components/PostComment";
- import PostLogin from "./components/PostLogin";
- import PostJoin from "./components/PostJoin";
 
 
 
@@ -82,12 +83,13 @@
       
        <BrowserRouter>
        <Routes>
-         <Route path="/" element={<PostMain/>}/>
-         <Route path="/write" element={<PostWrite/>}/>
-         <Route path="/login" element={<PostLogin />}/>
-         <Route path="/commentList" element={<PostComment />}/>
-         <Route path="/join" element={<PostJoin />}/>
+         <Route path="/list" element={<List />}/>
+         <Route path="/login" element={<Login />}/>
+         <Route path="/comment" element={<Comment />}/>
+         <Route path="/writing" element={<Writing />}/>
+         <Route path="/join" element={<Join />}/>
        </Routes>
+         <RouteTest />
        </BrowserRouter>
        
       </div>

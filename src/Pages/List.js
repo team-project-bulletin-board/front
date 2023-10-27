@@ -1,11 +1,15 @@
  import React, { useState, useEffect } from 'react';
  import axios from 'axios'
+ import '../css/List.css'
+import { useNavigate } from 'react-router-dom';
+
 
 
 // const List = ({ list }) => {
 //   console.log(list);
 function List(){
 
+  const navigate = useNavigate()
   const [list, setList] = useState([]);
 
    useEffect(() => {
@@ -25,9 +29,9 @@ function List(){
   setList(result.data.data);
  }
 
+
   return (
     <div className='pageList'>
-
        <h2>게시물 목록</h2>
        <h4>{list.length}개의 글이 있습니다.</h4>
       <div>
@@ -37,7 +41,18 @@ function List(){
         <div>제목 : {it.title}</div>
         <div>내용 : {it.content}</div>
         <div>날짜 : {it.date}</div>
+        <button className='buttonItem'>수정</button>
+        <button className='buttonItem'>삭제</button>
+        <button className='buttonWrap'
+          onClick={() => {
+            navigate('/Login')
+          }}
+          >
+            로그인
+        </button>
         </div>
+
+        
         /* 여기서 post는 위 객체의 하나를 뜻합니다!
   //           그래서 post.id, post.title, post.name, post.content로 해당 객체의 속성의 키값으로
   //           접근해서 데이터를 넣어주는 것이다! */

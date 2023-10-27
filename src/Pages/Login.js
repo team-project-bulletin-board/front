@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import '../css/Login.css';
+import { useNavigate } from "react-router-dom";
 
 const User = {
     email: 'qkdajr@example.com',
@@ -6,7 +8,8 @@ const User = {
 }
 
 
-export default function Login() {
+   function Login() {
+    const navigate = useNavigate()
     const [email,setEmail] = useState('');
     const [pw, setPw] = useState("");
 
@@ -99,8 +102,16 @@ export default function Login() {
                     <button onClick={onclickConfirmButton} disabled={notAllow} className="bottomButton">
                         확인
                     </button>
+                    <button className="bottomButton"
+          onClick={() => {
+            navigate('/join');
+          }}
+          >
+          회원가입
+        </button>
                 </div>
             </div>
     
     )
 }
+export default Login;

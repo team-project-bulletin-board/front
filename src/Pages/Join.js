@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Backend_URL } from "../utils";
+import '../css/Join.css';
+
 
 export const Join = () => {
 

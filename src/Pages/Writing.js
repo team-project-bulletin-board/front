@@ -1,7 +1,13 @@
 import { useRef, useState } from "react";
+import '../css/Writing.css';
+import { useNavigate } from "react-router-dom";
 
 
-const WritingEditor = ({onCreate})=>{
+
+
+const Writing = ({onCreate})=>{
+
+    const navigate =useNavigate()
     const [state,setState] = useState({
         author: "",
         content: "",
@@ -11,7 +17,7 @@ const WritingEditor = ({onCreate})=>{
     const authorInput = useRef();   //다른 테그에 접근할 수 있는 레퍼런스(ref 이름은 authorInput) 객체 생성
     const contentInput = useRef();   //다른 테그에 접근할 수 있는 레퍼런스(ref 이름은 contentInput) 객체 생성
    
-
+   
     const handleChangeState = (e)=>{
       
         setState({
@@ -64,10 +70,18 @@ const WritingEditor = ({onCreate})=>{
        
         <div>
             <button className="button" onClick={handleSubmit}>저장하기</button>
+            <button className="button" onClick={() => {
+              navigate('/List')
+
+            }}
+            >
+              목록
+            </button>
+            
         </div>
     </div>
    
      
      );
 };
-export default WritingEditor;
+export default Writing;

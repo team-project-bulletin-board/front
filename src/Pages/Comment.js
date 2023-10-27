@@ -1,13 +1,17 @@
 import { useRef, useState } from "react";
+import '../css/Comment.css';
 
 
 
 
-const CommentList = ({
+const Comment = ({
     onEdit,
     onRemove,
+    onChange,
+    author,
     id,
     content,
+    created_date,
     }) => {
 
         const [isEdit,setIsEdit] = useState(false);
@@ -18,7 +22,7 @@ const CommentList = ({
 
         const handleComment = () => {
             if (window.confirm(`${id}번째 댓글을 수정하시겠습니까?`)) {
-                onRemove(id);
+                onChange(id);
                }
 
         };
@@ -34,17 +38,20 @@ const CommentList = ({
                 localContentInput.current.focus();
                 return;
             }
-            if (window.confirm(`${id}번째 를 댓글을 삭제하시겠습니까?`)) {
+            if (window.confirm(`${id}번째 댓글을 삭제하시겠습니까?`)) {
 
-            onEdit(id,localContent);
+            onRemove(id,localContent);
             toggleIsEdit();
            }
         };
     return  (
        <div className="pageMenu">
             <div className="content">
-                {isEdit ? (
-             <>
+                {/* <span className="date">{new Date(created_date).toLocaleString()}</span> */}
+                </div>
+                <div className="content">
+                    {isEdit ? (
+                 <>
              <textarea
              ref={localContentInput}
               value={localContent}
@@ -63,7 +70,7 @@ const CommentList = ({
             </>
             ) : (
            <>
-            <button className="buttonList" onClick={handleEdit}>목록</button>
+            {/* <button className="buttonList" onClick={handleEdit}>목록</button> */}
             <button className="buttonList" onClick={toggleIsEdit}>등록</button>
             </>
             )}
@@ -71,4 +78,4 @@ const CommentList = ({
    );
 };
 
-export default CommentList;
+export default Comment;

@@ -1,10 +1,10 @@
-import '../css/PostMain.css';
-import { useState, useEffect } from 'react'
-import axios from 'axios'
-import List from "../Pages/List"
+// import '../css/PostMain.css';
+// import { useState, useEffect } from 'react'
+// import axios from 'axios'
+// import List from "../Pages/List"
 
 
-function PostMain(){
+// function PostMain(){
     // 1. 일단 처음에는 아래 getBoardData 비동기 요청으로 데이터를 받아오기전에
     // 미리 빈 배열으로 초기화 시킨 list라는 상태를 하나 생성해둡니다!
     // const [list, setList] = useState([])
@@ -44,30 +44,30 @@ function PostMain(){
      *  title: "안녕1"
      * }
      */
-    return(
-        <div id='post-main'>
-          <List />
+    // return(
+    //     <div id='post-main'>
+    //       <List />
       
-         {/* <ul> */}
-            {/* 5. list를 map 메서드를 이용해 파라미터로 넣은 콜백함수에서 반환한 값을
-            새로운 배열로 만들어서 렌더링해요! */}
-            {/* 여기서 post는 위 객체의 하나를 뜻합니다!
-            그래서 post.id, post.title, post.name, post.content로 해당 객체의 속성의 키값으로
-            접근해서 데이터를 넣어주는 겁니당! */}
-            {/* 나중에 좀 더 깔끔하게 하려면 <li> ... </li> 이 부분을 별도의 컴포넌트로 따로 뺄 수도 있으니
-            이것도 연습해보시면 좋아욥 ~ 끗!*/}
-            {/* {list.map((post) => ( */}
-{/* //                 <li key={post.id}>
-//                     <p style={{fontWeight: 'bold'}}>{post.title}</p>
-//                     <p>{post.name}</p>
-//                     <p>{post.content}</p>
-//                 </li>))}
-//          </ul>
-     </div>
-//     ) */}
+//          {/* <ul> */}
+//             {/* 5. list를 map 메서드를 이용해 파라미터로 넣은 콜백함수에서 반환한 값을
+//             새로운 배열로 만들어서 렌더링해요! */}
+//             {/* 여기서 post는 위 객체의 하나를 뜻합니다!
+//             그래서 post.id, post.title, post.name, post.content로 해당 객체의 속성의 키값으로
+//             접근해서 데이터를 넣어주는 겁니당! */}
+//             {/* 나중에 좀 더 깔끔하게 하려면 <li> ... </li> 이 부분을 별도의 컴포넌트로 따로 뺄 수도 있으니
+//             이것도 연습해보시면 좋아욥 ~ 끗!*/}
+//             {/* {list.map((post) => ( */}
+// {/* //                 <li key={post.id}>
+// //                     <p style={{fontWeight: 'bold'}}>{post.title}</p>
+// //                     <p>{post.name}</p>
+// //                     <p>{post.content}</p>
+// //                 </li>))}
+// //          </ul>
+//      </div>
+// //     ) */}
 
-{/* // } */}
-</div>
-    )};
+// {/* // } */}
+// </div>
+//     )};
 
-export default PostMain;
+// export default PostMain;
